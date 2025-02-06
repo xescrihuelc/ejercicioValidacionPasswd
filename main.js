@@ -1,19 +1,15 @@
-/* <8 */
-/* 8-10 */
-/* >10 */
-
-/* function name(params) {
-    
-} */
-
 function contar() {
-    let num = caract.textLength;
+    let num = caract.textLength; //Variable que detecta la longitud del contenido del input #passwd
+    let txt = document.getElementById("passwd-txt");
     if (num <= 7) {
-        console.log("menor");
+        txt.innerText = "La contraseña no es segura";
+        txt.className = "menor";
     } else if (num >= 11) {
-        console.log("mayor");
+        txt.innerText = "La contraseña es segura";
+        txt.className = "mayor";
     } else {
-        console.log("entre");
+        txt.innerText = "La contraseña es poco segura";
+        txt.className = "entre";
     }
 }
 const caract = document.getElementById("passwd");
