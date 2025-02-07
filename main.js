@@ -1,5 +1,5 @@
 function contar() {
-    let num = caract.textLength; //Variable que detecta la longitud del contenido del input #passwd
+    let num = caract.value.length; //Variable que detecta la longitud del contenido del input #passwd
     let txt = document.getElementById("passwd-txt");
     if (num <= 7) {
         txt.innerText = "La contraseña no es segura";
